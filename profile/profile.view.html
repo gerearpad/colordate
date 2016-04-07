@@ -1,30 +1,57 @@
-<div>
-    <img ng-src="assets/img/faces/{{vm.user.id}}.jpeg" />
-    <h3>{{vm.user.firstName}}!</h3>
-</div>    
-<div>
-    <h4>About</h4>
-    {{vm.user.firstName}} {{vm.user.lastName}}
-    <span>Age: {{vm.user.age}}</span>
-    <span>Location: {{vm.user.location}}</span>
-</div>
-<div>
-    <button>Send message</button>
-    <button>Favorites</button>
-    <button ng-if="!vm.isMyProfile">Not interested</button>
-</div>
+<div class="app-wrapper">
+    <div class="responsive-container">
+        <div ng-include="'partials/header.html'"></div>
+        <section class="app-content">
+            <div class="content">
+                <div>
+                    <img ng-src="assets/img/faces/{{vm.user.id}}.jpeg" />
+                    <h3>{{vm.user.firstName}}!</h3>
+                </div>
+                <div>
+                    <h4>About</h4>
+                    {{vm.user.firstName}} {{vm.user.lastName}}
+                    <span>Age: {{vm.user.age}}</span>
+                    <span>Location: {{vm.user.location}}</span>
+                </div>
+                <div>
+                    <button>Send message</button>
+                    <button>Favorites</button>
+                    <button ng-if="!vm.isMyProfile">Not interested</button>
+                </div>
 
-<div id="lifestyle-container" class="col-xs-12">
-    <div style="background-color: red; min-height: 10px" class="col-xs-2"></div>
-    <div class="col-xs-10">Lifestyle</div>
-</div>
+                <div id="lifestyle-container" class="col-xs-12">
+                    <div style="background-color: red; min-height: 10px" class="col-xs-2"></div>
+                    <div class="col-xs-10">Lifestyle</div>
+                </div>
 
-<div id="personality-container" class="col-xs-12">
-    <div style="background-color: green; min-height: 10px" class="col-xs-2"></div>
-    <div class="col-xs-10">Personality</div>
-</div>
+                <div id="personality-container" class="col-xs-12">
+                    <div style="background-color: green; min-height: 10px" class="col-xs-2"></div>
+                    <div class="col-xs-10">Personality</div>
+                </div>
 
-<div id="nature-container" class="col-xs-12">
-    <div style="background-color: blue;  min-height: 10px" class="col-xs-2"></div>
-    <div class="col-xs-10">Nature</div>
+                <div id="nature-container" class="col-xs-12">
+                    <div style="background-color: blue;  min-height: 10px" class="col-xs-2"></div>
+                    <div class="col-xs-10">Nature</div>
+                </div>
+            </div>
+            <!--
+                <div class="person">
+                    <div class="avatar"><img src="assets/img/faces/f_10.jpeg" alt="face" /></div>
+                    <h3>John Papa <span class="age">, 24</span><span class="location"> from Panama</span></h3>
+                    <div class="separator"></div>
+                    <ul class="color">
+                        <li style="background-color: #000;"></li>
+                        <li style="background-color: #000;"></li>
+                        <li style="background-color: #000;"></li>
+                    </ul>
+                    <div class="actions">
+                        <button class="chat"><i class="flaticon-letter"></i></button>
+                        <button class="connect"><i class="flaticon-heart-3"></i></button>
+                        <button class="reject"><i class="flaticon-forbidden"></i></button>
+                    </div>
+                </div>
+            -->
+        </section>
+        <div ng-include="'partials/footer.html'"></div>
+    </div>
 </div>

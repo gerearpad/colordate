@@ -1,10 +1,17 @@
-<div>inbox</div>
-<div class="message-container" ng-repeat="message in vm.messages">
-    <div class="from-image">
-        <img class="image-from" width="50px" height="50px" ng-src="assets/img/faces/{{message.from}}.jpeg">
-    </div>
-    <div>
-        <span class="message-from">{{vm.getUserDetail(message.from, 'name')}}</span><span class="message-date">last massaged on {{message.date}}</span>
-        <span class="massage-text" ng-class="{message-unseen: !message.read}">{{message.message}}</span>
+<div class="app-wrapper">
+    <div class="responsive-container">
+        <div ng-include="'partials/header.html'"></div>
+        <section class="app-content">
+            <div class="message-container" ng-repeat="message in vm.messages">
+                <div class="from-image">
+                    <img class="image-from" width="50px" height="50px" ng-src="assets/img/faces/{{message.from}}.jpeg">
+                </div>
+                <div>
+                    <span class="message-from">{{vm.getUserDetail(message.from, 'name')}}</span><span class="message-date">last massaged on {{message.date}}</span>
+                    <span class="massage-text" ng-class="{unseen: !message.read}">{{message.message}}</span>
+                </div>
+            </div>
+        </section>
+        <div ng-include="'partials/footer.html'"></div>
     </div>
 </div>

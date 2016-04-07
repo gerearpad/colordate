@@ -30,7 +30,7 @@
                         }
                         callback(response);
                     });
-            }, 1000);
+            }, 0);
 
             /* Use this for real authentication
              ----------------------------------------------*/

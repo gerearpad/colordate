@@ -86,7 +86,7 @@
                             deferred.resolve({ success: true });
                         }
                     });
-            }, 1000);
+            }, 0);
 
             return deferred.promise;
         }
