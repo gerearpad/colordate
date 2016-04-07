@@ -9,6 +9,7 @@
     function HomeController(UserService, $rootScope) {
         var vm = this;
 
+        vm.title = 'Matches';
         vm.user = null;
         vm.allUsers = [];
         //vm.deleteUser = deleteUser;

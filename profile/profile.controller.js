@@ -10,6 +10,7 @@
     function ProfileController($location, $routeParams, $rootScope, AuthenticationService, UserService) {
         var vm = this;
 
+        vm.title = "Profile";
         vm.isMyProfile = false;  ;
         
         vm.user = {};
