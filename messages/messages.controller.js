@@ -5,11 +5,11 @@
         .module('app')
         .controller('MessagesController', MessagesController);
 
-    MessagesController.$inject = ['$location', 'MessagesService'];
-    function MessagesController($location, MessagesService) {
+    MessagesController.$inject = [ 'MessagesService'];
+    function MessagesController(MessagesService) {
         var vm = this;
         vm.title = "Messages";
         vm.messages = MessagesService.getAllMessage();
-        console.log(vm.messages);
+        vm.conversation = MessagesService.getConversation();
     }
 })();

@@ -39,6 +39,12 @@
                 controllerAs: 'vm'
             })
 
+            .when('/messages/:userId', {
+                controller: 'MessagesController',
+                templateUrl: 'messages/message.view.html',
+                controllerAs: 'vm'
+            })
+
             .otherwise({ redirectTo: '/login' });
     }
 

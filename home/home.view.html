@@ -5,7 +5,7 @@
             <div class="content">
                <div class="person" ng-repeat="user in vm.allUsers">
                    <a href="#/profile/{{user.id}}">
-                       <div class="avatar"><img ng-src="assets/img/faces/{{user.id}}.jpeg" alt="face"/></div>
+                       <div ng-attr-style="border-color: {{user.userColor}}" class="avatar"><img ng-src="assets/img/faces/{{user.id}}.jpeg" alt="face"/></div>
                    </a>
                    <h3><a href="#/profile/{{user.id}}">{{user.firstName}} {{user.lastName}}</a> <span class="age">, {{user.age}}</span><span class="location"> from {{user.location}}</span></h3>
                     <div class="separator"></div>
