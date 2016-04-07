@@ -1,0 +1,28 @@
+<div>
+    <img src="http://knackforge.com/sites/default/files/styles/thumbnail/public/default_images/dummy_5.png?itok=u3AnzUlQ" />
+    <h3>{{vm.user.firstName}}!</h3>
+</div>    
+<div>
+    <h4>About</h4>
+    <span>Age: {{vm.user.age}}</span>
+</div>
+<div>
+    <button>Send message</button>
+    <button>Favorites</button>
+    <button ng-if="!vm.isMyProfile">Not interested</button>
+</div>
+
+<div id="lifestyle-container">
+    <div style="backgroud-color: red; min-width: 10px"></div>
+    <div>Lifestyle</div>
+</div>
+
+<div id="personality-container">
+    <div style="backgroud-color: green; min-width: 10px"></div>
+    <div>Personality</div>
+</div>
+
+<div id="nature-container">
+    <div style="backgroud-color: blue;  min-width: 10px"></div>
+    <div>Nature</div>
+</div>
