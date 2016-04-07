@@ -12,10 +12,8 @@
 
         service.GetAll = GetAll;
         service.Create = Create;
-        //service.GetById = GetById;
         service.GetByUsername = GetByUsername;
         service.GetById = GetById;
-        //service.Update = Update;
 
         return service;
 
