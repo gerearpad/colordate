@@ -1,21 +1,24 @@
-﻿<div class="app-wrapper">
+<div class="app-wrapper">
     <div class="responsive-container">
         <div ng-include="'partials/header.html'"></div>
         <section class="app-content">
-
-            <ul>
-                <li ng-repeat="user in vm.allUsers">
-                    <div class="user">
-                        <div class="user-image">
-                            <img class="face-image" src="img/faces/m_1.jpeg" alt="face" width="50px" height="50px">
-                        </div>
-                        <div class="user-info">
-                            <span>{{user.firstName}} {{user.lastName}} age: {{user.age}} location:{{user.location}}</span>
-                        </div>
+            <div class="content">
+               <div class="person" ng-repeat="user in vm.allUsers">
+                    <div class="avatar"><img src="assets/img/faces/{{user.id}}.jpeg" alt="face" /></div>
+                    <h3>{{user.firstName}} {{user.lastName}} <span class="age">, {{user.age}}</span><span class="location"> from {{user.location}}</span></h3>
+                    <div class="separator"></div>
+                    <ul class="color">
+                        <li style="background-color: #000;"></li>
+                        <li style="background-color: #000;"></li>
+                        <li style="background-color: #000;"></li>
+                    </ul>
+                    <div class="actions">
+                        <button class="chat"><i class="flaticon-letter"></i></button>
+                        <button class="connect"><i class="flaticon-heart-3"></i></button>
+                        <button class="reject"><i class="flaticon-forbidden"></i></button>
                     </div>
-                </li>
-            </ul>
-
+                </div>
+            </div>
         </section>
         <div ng-include="'partials/footer.html'"></div>
     </div>
