@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     angular
@@ -26,6 +26,12 @@
                 templateUrl: 'register/register.view.html',
                 controllerAs: 'vm'
             })
+        
+            .when('/profile', {
+                controller: 'ProfileController',
+                templateUrl: 'profile/profile.view.html',
+                controllerAs: 'vm'
+            })
 
             .otherwise({ redirectTo: '/login' });
     }
@@ -40,7 +46,7 @@
 
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in and trying to access a restricted page
-            var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+            var restrictedPage = $.inArray($location.path(), ['/login', '/register', '/profile']) === -1;
             var loggedIn = $rootScope.globals.currentUser;
             if (restrictedPage && !loggedIn) {
                 $location.path('/login');
