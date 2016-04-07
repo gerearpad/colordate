@@ -1,0 +1,88 @@
+@import "config.less";
+
+// Auth style
+
+form {
+    h1 {
+        margin: 0 0 60px;
+        padding: 0;
+        font-size: 28px;
+        color: @cGreen;
+        padding-left: 70px;
+        display: block;
+        position: relative;
+        padding-top: 20px;
+
+        i {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        i:before {
+            font-size: 60px !important;
+            color: @cRed;
+        }
+    }
+
+    fieldset {
+        .field {
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 2px dashed @cBlue;
+            font-size: 13px;
+            color: @cTypoGray;
+            text-align: left;
+            border-radius: 20px;
+            outline-width: 0;
+
+            &:focus {
+                border: 2px dashed @cPink;
+            }
+
+            &:hover {
+                border: 2px dashed @cGreen;
+            }
+        }
+
+        button {
+            width: 100%;
+            padding: 12px 15px !important;
+            text-align: left;
+            border-radius: 20px;
+            background: @cPink;
+            transition: all 0.2s ease-in-out 0s;
+            outline-width: 0 !important;
+            border-radius: 20px !important;
+
+            &:hover {
+                color: @cPinkDark;
+            }
+        }
+
+        .note {
+            padding: 10px 0;
+            font-size: 12px;
+            color: @cTypoGray;
+            text-align: center;
+
+            a {
+                color: @cGreen;
+                text-decoration: none !important;
+                &:hover {
+                    color: @cGreenDark;
+                }
+            }
+        }
+    }
+}
+
+.incl-disabled {
+    opacity: 0.1;
+    cursor: default !important;
+}
