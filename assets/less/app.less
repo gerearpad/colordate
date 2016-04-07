@@ -169,7 +169,7 @@
 
 .person {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     padding-left: 110px;
     background:Red;
     min-height: 90px;
@@ -184,18 +184,214 @@
         border-radius: 50%;
         transition: all 0.2s ease-in-out 0s;
         cursor: pointer;
+        overflow: hidden;
 
         img {
             border-radius: 50%;
             width: 100%;
-            height: auto;
-            min-height: 100%;
+            height: 100%;
         }
     }
 
     &:hover {
         .avatar {
             transform: scale(1.1);
+        }
+    }
+
+    .separator {
+        position: relative;
+        margin: 5px 0;
+        margin-right: 45px;
+        border-bottom: 2px dashed @cGreen;
+    }
+
+    a {
+        color: @cRed;
+    }
+
+    h3 {
+        font-size: 17px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;
+        color: @cRed;
+        padding-right: 70px;
+
+        span.age {
+            font-size: 14px;
+            color: @cBlue;
+        }
+
+        span.location {
+            font-size: 13px;
+            color: @cGreenDark;
+        }
+    }
+
+    ul.color {
+        position: relative;
+
+        li {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 1px;
+        }
+    }
+
+    .actions {
+        button {
+            border: 0;
+            background: none;
+            transition: all 0.2s ease-in-out 0s;
+            outline-width: 0;
+            position: absolute;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &.chat {
+                right: 45px;
+                top: 0;
+
+                i:before {
+                    font-size: 30px;
+                    color: @cBlue;
+                }
+            }
+
+            &.connect {
+                right: 0;
+                top: 18px;
+
+                i:before {
+                    font-size: 28px;
+                    color: @cRed;
+                }
+            }
+
+            &.reject {
+                right: 45px;
+                top: 45px;
+
+                i:before {
+                    font-size: 20px;
+                    color: @cDarkGray;
+                }
+            }
+
+        }
+    }
+
+    &.single {
+        position: relative;
+        margin-bottom: 0;
+        padding-left: 0;
+        min-height: 0;
+        padding-top: 20px;
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            position: relative;
+            border: 6px solid @cBlue;
+            border-radius: 50%;
+            transition: all 0.2s ease-in-out 0s;
+            cursor: pointer;
+            overflow: hidden;
+            margin: 0 auto;
+            z-index:6;
+
+            img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .separator {
+            position: absolute;
+            width: 100%;
+            top: 90px;
+            margin: 0;
+            margin-right: 0;
+            border-bottom: 2px dashed @cGreen;
+        }
+
+        .actions {
+            button {
+                border: 0;
+                background: none;
+                transition: all 0.2s ease-in-out 0s;
+                outline-width: 0;
+                position: absolute;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &.chat {
+                    right: 25%;
+                    top: 40px;
+                }
+
+                &.connect {
+                    left: 27%;
+                    top: 45px;
+                }
+
+                &.reject {
+                    right: 27%;
+                    top: 95px;
+                }
+
+            }
+        }
+
+        h3 {
+            text-align: center;
+            padding-right: 0;
+        }
+
+        ul.color {
+            padding: 30px 0;
+            position: relative;
+            text-align: center;
+
+            li {
+                width: auto;
+                height: auto;
+                border-radius: 0;
+                display: inline-block;
+                margin: 0 1px;
+                width: 20%;
+                font-size: 13px;
+                color: @cTypoGray;
+                margin:0;
+                margin: 0 15px;
+                padding: 0;
+
+                div {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin: 0 auto;
+                    margin-bottom: 5px;
+                    display: block;
+                }
+            }
+        }
+
+        .description {
+            padding: 0px 15px;
+            text-align: center;
+            font-size: 13px;
+            color: @cTypoGray;
         }
     }
 }
