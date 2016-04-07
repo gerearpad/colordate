@@ -1,6 +1,294 @@
 @import "../../libs/flaticon/flaticon.css";
+/* ----------------------------------------------------------------------*/
 body {
   font-size: 14px;
   font-family: 'Lato', sans-serif;
   color: #7b7b7b;
+  text-align: left;
+}
+a,
+a:hover {
+  outline: none;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+h2 {
+  display: block;
+  position: relative;
+  margin: 0 5px;
+  padding: 15px 0 0 0;
+  font-size: 18px;
+  font-weight: 900;
+  padding-left: 13px;
+}
+h2:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  background: #4586e7;
+  left: 0;
+  top: 21px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+h2 .matches {
+  color: #e74545;
+}
+/* ----------------------------------------------------------------------*/
+.app-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 15px;
+}
+.app-wrapper .responsive-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 660px;
+  height: 100%;
+}
+.app-wrapper .responsive-container:before,
+.app-wrapper .responsive-container:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 10;
+}
+.app-wrapper .responsive-container:before {
+  top: 180px;
+  background: -moz-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+}
+.app-wrapper .responsive-container:after {
+  bottom: 120px;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+}
+.app-wrapper .responsive-container .app-header,
+.app-wrapper .responsive-container .app-footer {
+  padding: 10px 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+.app-wrapper .responsive-container .app-header {
+  top: 0;
+  height: 180px;
+}
+.app-wrapper .responsive-container .app-header .nav-item {
+  padding-top: 22px;
+}
+.app-wrapper .responsive-container .app-header .row .col-xs-6:last-child {
+  text-align: right;
+}
+.app-wrapper .responsive-container .app-footer {
+  bottom: 0;
+  height: 120px;
+  padding-top: 20px;
+}
+.app-wrapper .responsive-container .app-footer .row .col-xs-6:last-child {
+  text-align: right;
+  padding-top: 3px;
+}
+.app-wrapper .responsive-container .app-footer .row .col-xs-6:last-child i:before {
+  font-size: 55px;
+}
+.app-wrapper .responsive-container .app-content {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  padding-top: 180px;
+  padding-bottom: 120px;
+}
+.app-wrapper .responsive-container .app-content > .content {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  padding: 0 20px;
+}
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+.user-profile {
+  position: relative;
+  margin-left: -10px;
+}
+.user-profile .avatar {
+  position: relative;
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  background: #de3f60;
+  padding: 8px;
+  z-index: 11;
+}
+.user-profile .avatar > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #c1c1c1;
+  border: 4px solid #FFFFFF;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out 0s;
+}
+.user-profile .avatar > div:hover {
+  transform: scale(1.1);
+}
+.user-profile .avatar > div img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+.user-profile .logout {
+  border: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #FFFFFF;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 1px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 12;
+  top: 80px;
+  left: 85px;
+  background: #20c324;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out 0s;
+}
+.user-profile .logout:hover {
+  transform: scale(1.1);
+}
+.user-profile button {
+  border: 0;
+  color: #FFFFFF;
+  transition: all 0.2s ease-in-out 0s;
+  background: none;
+  position: absolute;
+  z-index: 12;
+  display: block;
+}
+.user-profile button i:before {
+  font-size: 26px;
+}
+.user-profile button:hover {
+  transform: scale(1.2);
+}
+.user-profile button.photo {
+  top: 10px;
+  left: 105px;
+}
+.user-profile button.profile {
+  top: 22px;
+  left: 155px;
+}
+.user-profile .bubble {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  background: #de3f60;
+}
+.user-profile .bubble.bubble1 {
+  left: 80px;
+  top: 10px;
+  width: 80px;
+  height: 80px;
+}
+.user-profile .bubble.bubble2 {
+  left: 70px;
+  top: 45px;
+  width: 70px;
+  height: 70px;
+}
+.user-profile .bubble.bubble3 {
+  left: 100px;
+  top: 30px;
+  width: 80px;
+  height: 80px;
+}
+.user-profile .bubble.bubble4 {
+  left: 140px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+}
+.nav-item {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  transition: all 0.2s ease-in-out 0s;
+  outline-width: 0;
+}
+.nav-item:hover {
+  transform: scale(1.1);
+}
+.nav-item i:before {
+  font-size: 65px;
+  line-height: 65px;
+}
+.nav-item.chat {
+  color: #4586e7;
+}
+.nav-item.connections {
+  color: #20c324;
+}
+.nav-item.matches {
+  color: #e74545;
+}
+.nav-item[disabled] {
+  color: #c1c1c1;
+}
+/* ----------------------------------------------------------------------*/
+.person {
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 110px;
+  background: Red;
+  min-height: 90px;
+}
+.person .avatar {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 5px solid #4586e7;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+}
+.person .avatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+.person:hover .avatar {
+  transform: scale(1.1);
 }
