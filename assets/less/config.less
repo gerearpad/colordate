@@ -1,17 +1,28 @@
-// Dependencies
 @import "../../libs/flaticon/flaticon.css";
+@import "layout.less";
 
-// Constants
-@cWhite:            #FFFFFF;
-@cBlack:            #000000;
-@cRed:              #e74545;
-@cBlue:             #4586e7;
-@cGreen:            #20c324;
-@cPink:             #de3f60;
-@cDisabledGray:     #c1c1c1;
-@cTypoGray:         #7b7b7b;
-@cDarkGray:         #474747;
+/* ----------------------------------------------------------------------*/
+// Colors
+@cWhite: #FFFFFF;
+@cBlack: #000000;
+@cRed: #e74545;
+@cRedDark: darken(@cRed, 4%);
+@cBlue: #4586e7;
+@cBlueDark: darken(@cBlue, 4%);
+@cGreen: #20c324;
+@cGreenDark: darken(@cGreen, 4%);
+@cPink: #de3f60;
+@cPinkDark: darken(@cPink, 4%);
+@cDisabledGray: #c1c1c1;
+@cTypoGray: #7b7b7b;
+@cDarkGray: #474747;
 
-// Breakpoints
-@port-xs:       ~"only screen and (max-width: 768px)";
-@port-lg:       ~"only screen and (min-width: 769px)";
+/* ----------------------------------------------------------------------*/
+// Sizes
+@headerHeight: 180px;
+@footerHeight: 120px;
+
+/* ----------------------------------------------------------------------*/
+// Responsive breakpoints
+@port-xs: ~"only screen and (max-width: 768px)";
+@port-lg: ~"only screen and (min-width: 769px)";
