@@ -11,7 +11,7 @@
 
         vm.user = null;
         vm.allUsers = [];
-        vm.deleteUser = deleteUser;
+        //vm.deleteUser = deleteUser;
 
         initController();
 
@@ -28,17 +28,7 @@
         }
 
         function loadAllUsers() {
-            UserService.GetAll()
-                .then(function (users) {
-                    vm.allUsers = users;
-                });
-        }
-
-        function deleteUser(id) {
-            UserService.Delete(id)
-            .then(function () {
-                loadAllUsers();
-            });
+            vm.allUsers = UserService.GetAll();
         }
     }
 
