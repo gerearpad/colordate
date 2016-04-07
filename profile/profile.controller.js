@@ -5,16 +5,22 @@
         .module('app')
         .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['$location', 'AuthenticationService'];
+    ProfileController.$inject = ['$location', '$routeParams', 'AuthenticationService', 'UserService'] ;
     
-    function ProfileController($location, AuthenticationService) {
+    function ProfileController($location, $routeParams, AuthenticationService, UserService) {
         var vm = this;
         
-        vm.isMyProfile = true;
+        vm.isMyProfile = false;
         
         vm.user = {};
-        vm.user.firstName = 'Test name';
-        vm.user.age = 21;
+            
+        loadUserDetails();
+        function loadUserDetails(){
+            var indexUser = $routeParams.userId;
+            UserService.GetById(indexUser).then(function(data){
+                vm.user = data;                                              
+            });
+        }
     }
 
 })();

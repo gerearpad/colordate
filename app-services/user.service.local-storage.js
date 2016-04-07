@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     angular
@@ -14,6 +14,7 @@
         service.Create = Create;
         //service.GetById = GetById;
         service.GetByUsername = GetByUsername;
+        service.GetById = GetById;
         //service.Update = Update;
 
         return service;
@@ -60,6 +61,14 @@
             var filtered = $filter('filter')(getUsers(), { username: username });
             var user = filtered.length ? filtered[0] : null;
             deferred.resolve(user);
+            return deferred.promise;
+        }
+        
+        function GetById(index) {
+            var deferred = $q.defer();
+            var allUsers = GetAll();
+            var currentUser = allUsers[index];          
+            deferred.resolve(currentUser);
             return deferred.promise;
         }
 
