@@ -1,0 +1,181 @@
+@import "../../libs/flaticon/flaticon.css";
+/* ----------------------------------------------------------------------*/
+* {
+  text-decoration: none;
+}
+body {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  color: #7b7b7b;
+  text-align: left;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+h2 {
+  display: block;
+  position: relative;
+  margin: 0 5px;
+  padding: 15px 0 0 0;
+  font-size: 18px;
+  font-weight: 900;
+  padding-left: 13px;
+}
+h2:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  background: #4586e7;
+  left: 0;
+  top: 21px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+h2 .matches {
+  color: #e74545;
+}
+/* ----------------------------------------------------------------------*/
+.app-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 15px;
+}
+.app-wrapper .responsive-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 660px;
+  height: 100%;
+}
+.app-wrapper .responsive-container .app-header,
+.app-wrapper .responsive-container .app-footer {
+  padding: 10px 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+.app-wrapper .responsive-container .app-header {
+  top: 0;
+  height: 180px;
+}
+.app-wrapper .responsive-container .app-header .nav-item {
+  padding-top: 22px;
+}
+.app-wrapper .responsive-container .app-header .row .col-xs-6:last-child {
+  text-align: right;
+}
+.app-wrapper .responsive-container .app-footer {
+  bottom: 0;
+  height: 120px;
+  padding-top: 20px;
+}
+.app-wrapper .responsive-container .app-footer .row .col-xs-6:last-child {
+  text-align: right;
+  padding-top: 3px;
+}
+.app-wrapper .responsive-container .app-footer .row .col-xs-6:last-child i:before {
+  font-size: 55px;
+}
+.app-wrapper .responsive-container .app-content {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  padding-top: 180px;
+  padding-bottom: 120px;
+}
+.app-wrapper .responsive-container .app-content > .content {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  padding: 0 20px;
+}
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------*/
+form h1 {
+  margin: 0 0 60px;
+  padding: 0;
+  font-size: 28px;
+  color: #20c324;
+  padding-left: 70px;
+  display: block;
+  position: relative;
+  padding-top: 20px;
+}
+form h1 i {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+form h1 i:before {
+  font-size: 60px !important;
+  color: #e74545;
+}
+form fieldset .field {
+  padding-bottom: 15px;
+  position: relative;
+}
+form fieldset input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px dashed #4586e7;
+  font-size: 13px;
+  color: #7b7b7b;
+  text-align: left;
+  border-radius: 20px;
+  outline-width: 0;
+}
+form fieldset input:focus {
+  border: 2px dashed #de3f60;
+}
+form fieldset input:hover {
+  border: 2px dashed #20c324;
+}
+form fieldset button {
+  width: 100%;
+  padding: 12px 15px !important;
+  text-align: left;
+  border-radius: 20px;
+  background: #de3f60;
+  transition: all 0.2s ease-in-out 0s;
+  outline-width: 0 !important;
+  border-radius: 20px !important;
+}
+form fieldset button:hover {
+  color: #db2e52;
+}
+form fieldset .note {
+  padding: 10px 0;
+  font-size: 12px;
+  color: #7b7b7b;
+  text-align: center;
+}
+form fieldset .note a {
+  color: #20c324;
+  text-decoration: none !important;
+}
+form fieldset .note a:hover {
+  color: #1db121;
+}
+.incl-disabled {
+  opacity: 0.1;
+  cursor: default !important;
+}
