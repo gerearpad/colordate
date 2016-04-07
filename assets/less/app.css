@@ -1,5 +1,8 @@
 @import "../../libs/flaticon/flaticon.css";
 /* ----------------------------------------------------------------------*/
+* {
+  text-decoration: none;
+}
 body {
   font-size: 14px;
   font-family: 'Lato', sans-serif;
@@ -8,7 +11,7 @@ body {
 }
 a,
 a:hover {
-  outline: none;
+  text-decoration: none;
 }
 ul,
 li {
@@ -60,29 +63,6 @@ h2 .matches {
   margin: 0 auto;
   max-width: 660px;
   height: 100%;
-}
-.app-wrapper .responsive-container:before,
-.app-wrapper .responsive-container:after {
-  content: ' ';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  z-index: 10;
-}
-.app-wrapper .responsive-container:before {
-  top: 180px;
-  background: -moz-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  background: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
-}
-.app-wrapper .responsive-container:after {
-  bottom: 120px;
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
 }
 .app-wrapper .responsive-container .app-header,
 .app-wrapper .responsive-container .app-footer {
@@ -267,9 +247,8 @@ h2 .matches {
 /* ----------------------------------------------------------------------*/
 .person {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   padding-left: 110px;
-  background: Red;
   min-height: 90px;
 }
 .person .avatar {
@@ -282,13 +261,174 @@ h2 .matches {
   border-radius: 50%;
   transition: all 0.2s ease-in-out 0s;
   cursor: pointer;
+  overflow: hidden;
 }
 .person .avatar img {
   border-radius: 50%;
   width: 100%;
-  height: auto;
-  min-height: 100%;
+  height: 100%;
 }
 .person:hover .avatar {
   transform: scale(1.1);
+}
+.person .separator {
+  position: relative;
+  margin: 5px 0;
+  margin-right: 45px;
+  border-bottom: 2px dashed #20c324;
+}
+.person a {
+  color: #e74545;
+}
+.person h3 {
+  font-size: 17px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  color: #e74545;
+  padding-right: 70px;
+}
+.person h3 span.age {
+  font-size: 14px;
+  color: #4586e7;
+}
+.person h3 span.location {
+  font-size: 13px;
+  color: #1db121;
+}
+.person ul.color {
+  position: relative;
+}
+.person ul.color li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1px;
+}
+.person .actions button {
+  border: 0;
+  background: none;
+  transition: all 0.2s ease-in-out 0s;
+  outline-width: 0;
+  position: absolute;
+}
+.person .actions button:hover {
+  transform: scale(1.1);
+}
+.person .actions button.chat {
+  right: 45px;
+  top: 0;
+}
+.person .actions button.chat i:before {
+  font-size: 30px;
+  color: #4586e7;
+}
+.person .actions button.connect {
+  right: 0;
+  top: 18px;
+}
+.person .actions button.connect i:before {
+  font-size: 28px;
+  color: #e74545;
+}
+.person .actions button.reject {
+  right: 45px;
+  top: 45px;
+}
+.person .actions button.reject i:before {
+  font-size: 20px;
+  color: #474747;
+}
+.person.single {
+  position: relative;
+  margin-bottom: 0;
+  padding-left: 0;
+  min-height: 0;
+  padding-top: 20px;
+}
+.person.single .avatar {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  border: 6px solid #4586e7;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 6;
+}
+.person.single .avatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.person.single .separator {
+  position: absolute;
+  width: 100%;
+  top: 90px;
+  margin: 0;
+  margin-right: 0;
+  border-bottom: 2px dashed #20c324;
+}
+.person.single .actions button {
+  border: 0;
+  background: none;
+  transition: all 0.2s ease-in-out 0s;
+  outline-width: 0;
+  position: absolute;
+}
+.person.single .actions button:hover {
+  transform: scale(1.1);
+}
+.person.single .actions button.chat {
+  right: 25%;
+  top: 40px;
+}
+.person.single .actions button.connect {
+  left: 27%;
+  top: 45px;
+}
+.person.single .actions button.reject {
+  right: 27%;
+  top: 95px;
+}
+.person.single h3 {
+  text-align: center;
+  padding-right: 0;
+}
+.person.single ul.color {
+  padding: 30px 0;
+  position: relative;
+  text-align: center;
+}
+.person.single ul.color li {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  display: inline-block;
+  margin: 0 1px;
+  width: 20%;
+  font-size: 13px;
+  color: #7b7b7b;
+  margin: 0;
+  margin: 0 15px;
+  padding: 0;
+}
+.person.single ul.color li div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  display: block;
+}
+.person.single .description {
+  padding: 0px 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #7b7b7b;
 }
