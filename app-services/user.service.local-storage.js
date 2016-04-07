@@ -14,6 +14,7 @@
         service.Create = Create;
         service.GetByUsername = GetByUsername;
         service.GetById = GetById;
+        service.getDetail = getDetail;
 
         return service;
 
@@ -253,6 +254,15 @@
                 }
             }
             return false;
+        }
+
+        function getDetail(id, detail) {
+            var users = getAll();
+            for( var i=0; i<users.length; i++){
+                if(users[i].id === id){
+                    return users[i][detail];
+                }
+            }
         }
 
         function GetByUsername(username) {
