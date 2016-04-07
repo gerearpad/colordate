@@ -17,9 +17,7 @@
         loadUserDetails();
         function loadUserDetails(){
             var indexUser = $routeParams.userId;
-            UserService.GetById(indexUser).then(function(data){
-                vm.user = data;                                              
-            });
+            vm.user = UserService.GetById(indexUser);
         }
     }
 

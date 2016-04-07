@@ -46,27 +46,22 @@
             return users;
         }
 
-        //function GetById(id) {
-        //    var deferred = $q.defer();
-        //    var filtered = $filter('filter')(getUsers(), { id: id });
-        //    var user = filtered.length ? filtered[0] : null;
-        //    deferred.resolve(user);
-        //    return deferred.promise;
-        //}
+        function GetById(id) {
+            var users = GetAll();
+
+            for(var i=0; i<users.length; i++){
+                if(id === users[i].id){
+                    return users[i];
+                }
+            }
+            return false;
+        }
 
         function GetByUsername(username) {
             var deferred = $q.defer();
             var filtered = $filter('filter')(getUsers(), { username: username });
             var user = filtered.length ? filtered[0] : null;
             deferred.resolve(user);
-            return deferred.promise;
-        }
-        
-        function GetById(index) {
-            var deferred = $q.defer();
-            var allUsers = GetAll();
-            var currentUser = allUsers[index];          
-            deferred.resolve(currentUser);
             return deferred.promise;
         }
 
@@ -97,39 +92,6 @@
 
             return deferred.promise;
         }
-
-        //function Update(user) {
-        //    var deferred = $q.defer();
-        //
-        //    var users = getUsers();
-        //    for (var i = 0; i < users.length; i++) {
-        //        if (users[i].id === user.id) {
-        //            users[i] = user;
-        //            break;
-        //        }
-        //    }
-        //    setUsers(users);
-        //    deferred.resolve();
-        //
-        //    return deferred.promise;
-        //}
-
-        //function Delete(id) {
-        //    var deferred = $q.defer();
-        //
-        //    var users = getUsers();
-        //    for (var i = 0; i < users.length; i++) {
-        //        var user = users[i];
-        //        if (user.id === id) {
-        //            users.splice(i, 1);
-        //            break;
-        //        }
-        //    }
-        //    setUsers(users);
-        //    deferred.resolve();
-        //
-        //    return deferred.promise;
-        //}
 
         // private functions
 
