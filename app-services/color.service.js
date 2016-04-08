@@ -18,7 +18,6 @@
         return service;
 
         function getRed(color){
-            console.log(color.slice(1,3));
             return '#' + color.slice(1,3) + "0000";
         }
 

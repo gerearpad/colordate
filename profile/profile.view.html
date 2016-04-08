@@ -11,7 +11,7 @@
                             class="location"> from {{vm.user.location}}</span></h3>
                     <div class="separator"></div>
                     <div class="actions">
-                        <button class="chat"><i class="flaticon-letter"></i></button>
+                        <a href="#/messages/{{vm.user.id}}"><button class="chat"><i class="flaticon-letter"></i></button></a>
                         <button class="connect"><i class="flaticon-heart-3"></i></button>
                         <button ng-if="!vm.isMyProfile" class="reject"><i class="flaticon-forbidden"></i></button>
                     </div>
