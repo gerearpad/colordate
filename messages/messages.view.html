@@ -9,7 +9,7 @@
                     </a>
                     <h3><a href="#/profile/{{message.from}}">{{message.user}},</a> last messaged on {{message.date}} </h3>
                     <div class="separator"></div>
-                    <p class="massage-text" ng-class="{unseen: !message.read}">{{message.message}}</p>
+                    <p ng-click="vm.openConversation(message.from)" class="massage-text" ng-class="{unseen: !message.read}">{{message.message}}</p>
                     <div class="actions">
                         <button class="chat" ng-click="vm.openConversation(message.from)"><i class="flaticon-letter"></i></button>
                     </div>
