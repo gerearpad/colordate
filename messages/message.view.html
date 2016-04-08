@@ -2,8 +2,8 @@
     <div class="responsive-container">
         <div ng-include="'partials/header.html'"></div>
         <section class="app-content">
-            <div class="content">
-                <div class="person">
+            <div class="content message-content">
+                <div class="person person-messages">
                     <a href="#/profile/{{vm.fromId}}">
                         <div class="avatar"><img ng-src="assets/img/faces/{{vm.fromId}}.jpeg" alt="face"/></div>
                     </a>
@@ -15,6 +15,22 @@
                         {{msg.message}}
                     </div>
                 </div>
+
+
+                <form class="send-message">
+                    <fieldset>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="field"><input type="text" placeholder="my message"></div>
+                                </div>
+                                <div class="col-xs-2"><i class="flaticon-letter"></i></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+
             </div>
         </section>
         <div ng-include="'partials/footer.html'"></div>
