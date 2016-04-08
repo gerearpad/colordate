@@ -5,15 +5,17 @@
         .module('app')
         .factory('ColorService', ColorService);
 
-    ColorService.$inject = ['UserService'];
+    ColorService.$inject = ['UserService', '$cookieStore'];
 
-    function ColorService(UserService) {
+    function ColorService(UserService, $cookieStore) {
         var service = {};
 
         service.getRed = getRed;
         service.getGreen = getGreen;
         service.getBlue = getBlue;
         service.getRandomColor = getRandomColor;
+        service.getUserColor = getUserColor;
+        service.saveUserColor = saveUserColor;
 
 
         return service;
@@ -37,6 +39,14 @@
                 color += letters[Math.floor(Math.random() * 16)];
             }
             return color;
+        }
+
+        function getUserColor(){
+            $cookieStore.get('userColor');
+        }
+
+        function saveUserColor(color){
+            $cookieStore.put('userColor', color);
         }
     }
 
