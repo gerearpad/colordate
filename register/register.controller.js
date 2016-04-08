@@ -12,17 +12,19 @@
         vm.register = register;
 
         function register() {
-            vm.dataLoading = true;
-            UserService.Create(vm.user)
-                .then(function (response) {
-                    if (response.success) {
-                        FlashService.Success('Registration successful', true);
-                        $location.path('/tunnel');
-                    } else {
-                        FlashService.Error(response.message);
-                        vm.dataLoading = false;
-                    }
-                });
+            $location.path('/tunnel');
+            //
+            //vm.dataLoading = true;
+            //UserService.Create(vm.user)
+            //    .then(function (response) {
+            //        if (response.success) {
+            //            FlashService.Success('Registration successful', true);
+            //            $location.path('/tunnel');
+            //        } else {
+            //            FlashService.Error(response.message);
+            //            vm.dataLoading = false;
+            //        }
+            //    });
         }
     }
 
