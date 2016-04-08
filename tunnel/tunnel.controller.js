@@ -5,9 +5,9 @@
         .module('app')
         .controller('TunnelController', TunnelController);
 
-    TunnelController.$inject = ['QuestionService', '$rootScope', '$location'];
+    TunnelController.$inject = ['QuestionService', 'ColorService','$rootScope', '$location'];
     
-    function TunnelController(QuestionService, $rootScope, $location) {
+    function TunnelController(QuestionService, ColorService, $rootScope, $location) {
         var vm = this;
         
         vm.title = "Profile Questions";
@@ -16,9 +16,14 @@
         vm.currentQuestionIndex = -1;
         vm.currentQuestion = {};
         vm.isFinish = false;
+        vm.currentColor = '#a7b0b1';
         
         vm.getNextQuestion = getNextQuestion;
         vm.getNextCategory = getNextCategory;
+        vm.getRed = ColorService.getRed;
+        vm.getGreen = ColorService.getGreen;
+        vm.getBlue = ColorService.getBlue;
+        vm.gotoHome = gotoHome;
         
         getNextQuestion();        
         
@@ -38,8 +43,14 @@
             vm.currentCategoryIndex++;
             vm.currentCategory = QuestionService.GetAll()[vm.currentCategoryIndex];    
             if(vm.currentCategoryIndex >= QuestionService.GetAll().length){
-                  $location.path('/');   
+                  vm.isFinish = true;                 
+                  vm.currentColor = ColorService.getRandomColor();
+                  ColorService.saveUserColor(vm.currentColor);  
             }
+        }
+        
+        function gotoHome(){
+            $location.path('/');  
         }
         
     }
