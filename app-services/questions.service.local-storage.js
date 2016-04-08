@@ -13,6 +13,8 @@
 
         service.GetAll = GetAll;
         service.GetByCategory = GetByCategory;
+        
+        return service;
 
         function GetAll() {
             return [

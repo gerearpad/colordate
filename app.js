@@ -44,6 +44,12 @@
                 templateUrl: 'messages/message.view.html',
                 controllerAs: 'vm'
             })
+        
+            .when('/tunnel', {
+                controller: 'TunnelController',
+                templateUrl: 'tunnel/tunnel.view.html',
+                controllerAs: 'vm'
+            })
 
             .otherwise({ redirectTo: '/login' });
     }

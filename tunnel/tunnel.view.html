@@ -1,0 +1,20 @@
+<div class="app-wrapper">
+    <div class="responsive-container">
+        <div ng-include="'partials/header.html'"></div>
+        <section class="app-content">
+            <div class="content">
+                <h4>{{vm.currentCategory.text}}</h4>
+                <div>
+                    {{vm.currentQuestion.text}}
+                    <ul>
+                        <li ng-repeat="answer in vm.currentQuestion.answers">
+                            {{answer.text}}
+                        </li>
+                    </ul>
+                    <button ng-click="vm.getNextQuestion">Next</button>
+                </div>
+            </div>
+        </section>
+        <div ng-include="'partials/footer.html'"></div>
+    </div>
+</div>
