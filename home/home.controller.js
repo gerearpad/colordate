@@ -15,6 +15,7 @@
         vm.getRed = ColorService.getRed;
         vm.getGreen = ColorService.getGreen;
         vm.getBlue = ColorService.getBlue;
+        vm.userColor = ColorService.getUserColor();
 
         initController();
 
