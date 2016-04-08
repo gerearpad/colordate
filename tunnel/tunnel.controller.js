@@ -28,7 +28,7 @@
                 getNextCategory();
                 vm.currentQuestionIndex = 0;
             }          
-            if(vm.isFinish == false && vm.currentCategory !== undefined || vm.currentCategory.questions !== undefined ){
+            if(vm.isFinish == false && vm.currentCategory !== undefined && vm.currentCategory.questions !== undefined ){
                 vm.currentQuestion = vm.currentCategory.questions[ vm.currentQuestionIndex];
             }
             
