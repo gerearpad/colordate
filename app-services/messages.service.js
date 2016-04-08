@@ -14,11 +14,11 @@
         service.getConversation = getConversation;
 
         var messages = [
-            {from:'m_1', message:'Hy man, how are you?', date:'march 04', read: false},
-            {from:'m_2', message:'Hy man, how are you?', date:'march 04', read: true},
-            {from:'f_1', message:'Hy man, how are you?', date:'march 04', read: false},
-            {from:'f_2', message:'Hy man, how are you?', date:'march 04', read: true},
-            {from:'f_3', message:'Hy man, how are you?', date:'march 04', read: false}
+            {from:'m_1', user:'John1 Doe1', message:'Hy man, how are you?', date:'march 04', read: false},
+            {from:'m_2', user:'John2 Doe2', message:'Hy man, how are you?', date:'march 04', read: true},
+            {from:'f_1', user:'John3 Doe3', message:'Hy man, how are you?', date:'march 04', read: false},
+            {from:'f_2', user:'John5 Doe5', message:'Hy man, how are you?', date:'march 04', read: true},
+            {from:'f_3', user:'John4 Doe4', message:'Hy man, how are you?', date:'march 04', read: false}
         ];
 
         var conversation = [

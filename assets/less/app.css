@@ -506,3 +506,56 @@ h2 .matches {
   color: #4586e7 !important;
   font-weight: 700 !important;
 }
+/* ----------------------------------------------------------------------*/
+.message {
+  position: relative;
+  width: 50%;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #4586e7;
+  color: #FFFFFF;
+  font-size: 12px;
+  margin-left: 5%;
+}
+.message.mymsg {
+  color: #474747;
+  background: #c1c1c1;
+  margin-left: 45%;
+}
+.person.person-messages {
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
+}
+.person.person-messages .separator {
+  margin-right: 0 !important;
+}
+/* ----------------------------------------------------------------------*/
+.send-message {
+  position: absolute;
+  padding: 10px 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  background: #FFFFFF;
+}
+.send-message i {
+  color: #4586e7;
+  margin-right: 5px;
+  float: right;
+  z-index: 5;
+  cursor: pointer;
+}
+.send-message i:before {
+  font-size: 36px;
+  line-height: 44px;
+}
+.message-content {
+  padding-bottom: 70px;
+}
+.person-message .actions .chat {
+  right: 0px !important;
+  top: 17px !important;
+}
+/* ----------------------------------------------------------------------*/

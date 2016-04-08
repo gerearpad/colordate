@@ -20,11 +20,11 @@
                     <a href="#/profile/{{message.from}}">
                         <div ng-attr-style="border-color: {{message.from}}" class="avatar"><img ng-src="assets/img/faces/{{message.from}}.jpeg" alt="face"/></div>
                     </a>
-                    <h3><a href="#/profile/{{user.id}}">{{user.firstName}} {{user.lastName}}</a> <span class="age">, {{user.age}}</span><span class="location"> from {{user.location}}</span></h3>
+                    <h3><a href="#/profile/{{message.from}}">{{message.user}},</a> last messaged on {{message.date}} </h3>
                     <div class="separator"></div>
                     <p class="massage-text" ng-class="{unseen: !message.read}">{{message.message}}</p>
                     <div class="actions">
-                        <button class="chat"><i class="flaticon-letter"></i></button>
+                        <button class="chat" ng-click="vm.openConversation(message.from)"><i class="flaticon-letter"></i></button>
                     </div>
                 </div>
             </div>
