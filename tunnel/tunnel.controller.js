@@ -24,8 +24,7 @@
         
         function getNextQuestion(){
             vm.currentQuestionIndex++;
-            if(vm.currentCategory == undefined || vm.currentCategory.questions == undefined || vm.currentCategory.questions.length <=  vm.currentQuestionIndex){
-                console.log('next category ' +  vm.currentCategoryIndex);
+            if(vm.currentCategory == undefined || vm.currentCategory.questions == undefined || vm.currentCategory.questions.length <=  vm.currentQuestionIndex){                
                 getNextCategory();
                 vm.currentQuestionIndex = 0;
             }          
