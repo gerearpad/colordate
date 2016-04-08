@@ -10,7 +10,7 @@
         var vm = this;
         vm.title = "Messages";
         vm.openConversation = openConversation;
-        vm.messages = MessagesService.getAllMessage();
+        vm.messages = []; //MessagesService.getAllMessage();
         vm.conversation = MessagesService.getConversation();
         vm.userColor = ColorService.getUserColor();
         if($routeParams.userId){
@@ -19,6 +19,15 @@
 
         function openConversation(id) {
             $location.path('/messages/'+id);
+        }
+        
+        loadUsersForMessages();
+        function loadUsersForMessages(){
+            vm.messages = MessagesService.getAllMessage();
+            vm.messages.forEach(function(item){
+               var userMes = UserService.GetById(item.from);
+               item.user = userMes;
+            });
         }
     }
 })();

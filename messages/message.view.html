@@ -5,7 +5,7 @@
             <div class="content message-content">
                 <div class="person person-messages">
                     <a href="#/profile/{{vm.user.id}}">
-                        <div class="avatar"><img ng-src="assets/img/faces/{{vm.user.id}}.jpeg" alt="face"/></div>
+                        <div ng-attr-style="border-color: {{vm.user.userColor}}" class="avatar"><img ng-src="assets/img/faces/{{vm.user.id}}.jpeg" alt="face"/></div>
                     </a>
                     <h3><a href="#/profile/{{vm.user.id}}">{{vm.user.firstName}} {{vm.user.lastName}}</a></h3>
                     <div class="separator"></div>
