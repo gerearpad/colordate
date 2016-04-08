@@ -10,9 +10,9 @@
                    <h3><a href="#/profile/{{user.id}}">{{user.firstName}} {{user.lastName}}</a> <span class="age">, {{user.age}}</span><span class="location"> from {{user.location}}</span></h3>
                     <div class="separator"></div>
                     <ul class="color">
-                        <li style="background-color: #000;"></li>
-                        <li style="background-color: #000;"></li>
-                        <li style="background-color: #000;"></li>
+                        <li ng-attr-style="background-color: {{vm.getRed(user.userColor)}}"></li>
+                        <li ng-attr-style="background-color: {{vm.getGreen(user.userColor)}}"></li>
+                        <li ng-attr-style="background-color: {{vm.getBlue(user.userColor)}}"></li>
                     </ul>
                     <div class="actions">
                         <a href="#/messages/{{user.id}}"><button class="chat"><i class="flaticon-letter"></i></button></a>

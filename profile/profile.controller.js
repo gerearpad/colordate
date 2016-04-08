@@ -5,14 +5,17 @@
         .module('app')
         .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['$location', '$routeParams', '$rootScope', 'AuthenticationService', 'UserService'] ;
+    ProfileController.$inject = ['$location', '$routeParams', '$rootScope', 'AuthenticationService', 'UserService', ColorService] ;
     
-    function ProfileController($location, $routeParams, $rootScope, AuthenticationService, UserService) {
+    function ProfileController($location, $routeParams, $rootScope, AuthenticationService, UserService, ColorService) {
         var vm = this;
 
         vm.title = "Profile";
-        vm.isMyProfile = false;  ;
-        
+        vm.isMyProfile = false;
+        vm.getRed = ColorService.getRed;
+        vm.getGreen = ColorService.getGreen;
+        vm.getBlue = ColorService.getBlue;
+
         vm.user = {};
             
         loadUserDetails();

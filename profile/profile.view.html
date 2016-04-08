@@ -6,7 +6,7 @@
         <section class="app-content">
             <div class="content">
                 <div class="person single">
-                    <div class="avatar"><img ng-src="assets/img/faces/{{vm.user.id}}.jpeg"/></div>
+                    <div class="avatar" ng-attr-style="border-color: {{vm.user.userColor}}"><img ng-src="assets/img/faces/{{vm.user.id}}.jpeg"/></div>
                     <h3>{{vm.user.firstName}} {{vm.user.lastName}} <span class="age">, {{vm.user.age}}</span><span
                             class="location"> from {{vm.user.location}}</span></h3>
                     <div class="separator"></div>
@@ -16,9 +16,9 @@
                         <button ng-if="!vm.isMyProfile" class="reject"><i class="flaticon-forbidden"></i></button>
                     </div>
                     <ul class="color">
-                        <li ><div style="background-color: #000;"></div>Lifestyle</li>
-                        <li><div style="background-color: #000;"></div>Personality</li>
-                        <li><div style="background-color: #000;"></div>Nature</li>
+                        <li><div ng-attr-style="background-color: {{vm.getRed(vm.user.userColor)}}"></div>Lifestyle</li>
+                        <li><div ng-attr-style="background-color: {{vm.getGreen(vm.user.userColor)}}"></div>Personality</li>
+                        <li><div ng-attr-style="background-color: {{vm.getBlue(vm.user.userColor)}}"></div>Nature</li>
                     </ul>
                     <div class="description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
