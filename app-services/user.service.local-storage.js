@@ -15,6 +15,7 @@
         service.GetByUsername = GetByUsername;
         service.GetById = GetById;
         service.getDetail = getDetail;
+        service.GetFavorites = GetFavorites;
 
         var users = [
             {
@@ -336,6 +337,10 @@
 
         function setUsers(users) {
             localStorage.users = JSON.stringify(users);
+        }
+
+        function GetFavorites() {
+            return [users[1], users[4], users[6], users[7]];
         }
     }
 })();

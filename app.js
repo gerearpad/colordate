@@ -51,6 +51,12 @@
                 controllerAs: 'vm'
             })
 
+            .when('/favorites', {
+                controller: 'FavoritesController',
+                templateUrl: 'favorites/favorites.view.html',
+                controllerAs: 'vm'
+            })
+
             .otherwise({ redirectTo: '/login' });
     }
 

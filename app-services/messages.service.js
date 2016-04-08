@@ -25,7 +25,6 @@
             {fromme:true, message:'Hello!'},
             {fromme:false, message:'Hy! How are you?'},
             {fromme:true, message:'I\'m fine.Do you wanna go out see a moovie?'},
-            {fromme:true, message:'You can choose it if you want...'},
             {fromme:false, message:'Ok, I\'m in.'},
             {fromme:false, message:'Tomorrow evening Batman vs Superman?'},
         ];
