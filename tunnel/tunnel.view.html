@@ -35,21 +35,21 @@
                                     <i class="flaticon-diary"></i>
                                     <span class="q-category">You are done!</span>
                                     <span class="q-text">Your color is: <div class="your-color" style="background-color: {{vm.currentColor}}"></div></span>
-                                     <div class="person single">
-                                     <ul class="color">
-                                        <li><div ng-attr-style="background-color: {{vm.getRed(vm.currentColor)}}"></div>Lifestyle</li>
-                                        <li><div ng-attr-style="background-color: {{vm.getGreen(vm.currentColor)}}"></div>Personality</li>
-                                        <li><div ng-attr-style="background-color: {{vm.getBlue(vm.currentColor)}}"></div>Nature</li>
-                                    </ul>
-                                    </div>
-                                    <form>
-                                    <fieldset>
-                                        <div class="field">
-                                            <button ng-click="vm.gotoHome()">Done</button>
-                                        </div>                                       
-                                    </fieldset>
-                                </form>
                                 </h1>
+                                 <div class="person single">
+                                 <ul class="color">
+                                    <li><div ng-attr-style="background-color: {{vm.getRed(vm.currentColor)}}"></div>Lifestyle</li>
+                                    <li><div ng-attr-style="background-color: {{vm.getGreen(vm.currentColor)}}"></div>Personality</li>
+                                    <li><div ng-attr-style="background-color: {{vm.getBlue(vm.currentColor)}}"></div>Nature</li>
+                                </ul>
+                                </div>
+                                <form>
+                                <fieldset>
+                                    <div class="field">
+                                        <button ng-click="vm.gotoHome()">Done</button>
+                                    </div>                                       
+                                </fieldset>
+                                </form>
                             </div>
                         </div>
                     </div>
