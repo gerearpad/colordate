@@ -7,7 +7,7 @@
                     <a href="#/profile/{{message.from}}">
                         <div ng-attr-style="border-color: {{message.user.userColor}}" class="avatar"><img ng-src="assets/img/faces/{{message.from}}.jpeg" alt="face"/></div>
                     </a>
-                    <h3><a href="#/profile/{{message.from}}">{{message.user.firstName}} {{message.user.lastName}},</a> last messaged on {{message.date}} </h3>
+                    <h3><a href="#/profile/{{message.from}}">{{message.user.firstName}} {{message.user.lastName}},</a> last message on {{message.date}} </h3>
                     <div class="separator"></div>
                     <p ng-click="vm.openConversation(message.from)" class="massage-text" ng-class="{unseen: !message.read}">{{message.message}}</p>
                     <div class="actions">
