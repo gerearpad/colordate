@@ -523,6 +523,10 @@ h2 .matches {
   background: #c1c1c1;
   margin-left: 45%;
 }
+.person.person-messages {
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
+}
 .person.person-messages .separator {
   margin-right: 0 !important;
 }
@@ -550,3 +554,8 @@ h2 .matches {
 .message-content {
   padding-bottom: 70px;
 }
+.person-message .actions .chat {
+  right: 0px !important;
+  top: 17px !important;
+}
+/* ----------------------------------------------------------------------*/
