@@ -630,3 +630,6 @@ h2 .matches {
   margin-bottom: 5px;
   display: block;
 }
+.massage-text{
+  cursor: pointer;
+}
