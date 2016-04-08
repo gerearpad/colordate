@@ -4,10 +4,10 @@
         <section class="app-content">
             <div class="content">
                 <div class="person">
-                    <a href="#/profile/{{vm.fromId}}">
-                        <div class="avatar"><img ng-src="assets/img/faces/{{vm.fromId}}.jpeg" alt="face"/></div>
+                    <a href="#/profile/{{vm.user.id}}">
+                        <div class="avatar"><img ng-src="assets/img/faces/{{vm.user.id}}.jpeg" alt="face"/></div>
                     </a>
-                    <h3><a href="#/profile/{{vm.fromId}}">{{vm.user}}</a></h3>
+                    <h3><a href="#/profile/{{vm.user.id}}">{{vm.user.firstName}} {{vm.user.lastName}}</a></h3>
                     <div class="separator"></div>
                 </div>
                 <div ng-repeat="msg in vm.conversation">

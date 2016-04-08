@@ -13,8 +13,7 @@
         vm.messages = MessagesService.getAllMessage();
         vm.conversation = MessagesService.getConversation();
         if($routeParams.userId){
-            vm.fromId = $routeParams.userId;
-            vm.user = "John2 Doe2";
+            vm.user = UserService.GetById($routeParams.userId);
         }
 
         function openConversation(id) {
