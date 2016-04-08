@@ -1,0 +1,22 @@
+<div class="app-wrapper">
+    <div class="responsive-container">
+        <div ng-include="'partials/header.html'"></div>
+        <section class="app-content">
+            <div class="content">
+                <div class="person">
+                    <a href="#/profile/{{vm.fromId}}">
+                        <div class="avatar"><img ng-src="assets/img/faces/{{vm.fromId}}.jpeg" alt="face"/></div>
+                    </a>
+                    <h3><a href="#/profile/{{vm.fromId}}">{{vm.user}}</a></h3>
+                    <div class="separator"></div>
+                </div>
+                <div ng-repeat="msg in vm.conversation">
+                    <div class="message" ng-class="{mymsg: msg.fromme}">
+                        {{msg.message}}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div ng-include="'partials/footer.html'"></div>
+    </div>
+</div>
