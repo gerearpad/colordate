@@ -20,16 +20,16 @@
         initController();
 
         function initController() {
-            loadCurrentUser();
+            //loadCurrentUser();
             loadAllUsers();
         }
 
-        function loadCurrentUser() {
-            UserService.GetByUsername($rootScope.globals.currentUser.username)
-                .then(function (user) {
-                    vm.user = user;
-                });
-        }
+        //function loadCurrentUser() {
+        //    UserService.GetByUsername($rootScope.globals.currentUser.username)
+        //        .then(function (user) {
+        //            vm.user = user;
+        //        });
+        //}
 
         function loadAllUsers() {
             vm.allUsers = UserService.GetAll();
