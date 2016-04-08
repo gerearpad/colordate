@@ -42,10 +42,19 @@
         }
 
         function getUserColor(){
-            $cookieStore.get('userColor');
+            var color = getRandomColor();
+            console.log('random color: '+color);
+            if($cookieStore.get('userColor')){
+                color = $cookieStore.get('userColor');
+                console.log('cookie store color: '+color);
+            }else{
+                saveUserColor(color);
+            }
+            return color;
         }
 
         function saveUserColor(color){
+            $cookieStore.remove('userColor');
             $cookieStore.put('userColor', color);
         }
     }
