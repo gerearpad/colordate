@@ -5,7 +5,7 @@
         .module('app')
         .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['$location', '$routeParams', '$rootScope', 'AuthenticationService', 'UserService', ColorService] ;
+    ProfileController.$inject = ['$location', '$routeParams', '$rootScope', 'AuthenticationService', 'UserService', 'ColorService'] ;
     
     function ProfileController($location, $routeParams, $rootScope, AuthenticationService, UserService, ColorService) {
         var vm = this;
