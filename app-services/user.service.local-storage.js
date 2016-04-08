@@ -26,7 +26,8 @@
                 hairColor: 'brown',
                 eyeColor: 'brown',
                 userColor: '#4f61c9',
-                location: 'New York'
+                location: 'New York',
+                username: 'm_1'
             },
             {
                 id: 'm_2',
@@ -37,7 +38,8 @@
                 hairColor: 'brown',
                 eyeColor: 'green',
                 userColor: '#5f61c9',
-                location: 'Washington'
+                location: 'Washington',
+                username: 'm_2'
             },
             {
                 id: 'm_3',
@@ -48,7 +50,8 @@
                 hairColor: 'brown',
                 eyeColor: 'blue',
                 userColor: '#6f61c9',
-                location: 'Raleigh'
+                location: 'Raleigh',
+                username: 'm_3'
             },
             {
                 id: 'm_4',
@@ -59,7 +62,8 @@
                 hairColor: 'brown',
                 eyeColor: 'green',
                 userColor: '#7f61c9',
-                location: 'London'
+                location: 'London',
+                username: 'm_4'
             },
             {
                 id: 'm_5',
@@ -70,7 +74,8 @@
                 hairColor: 'brown',
                 eyeColor: 'brown',
                 userColor: '#8f61c9',
-                location: 'Paris'
+                location: 'Paris',
+                username: 'm_5'
             },
             {
                 id: 'm_6',
@@ -81,7 +86,8 @@
                 hairColor: 'brown',
                 eyeColor: 'blue',
                 userColor: '#9f61c9',
-                location: 'Bucharest'
+                location: 'Bucharest',
+                username: 'm_6'
             },
             {
                 id: 'm_7',
@@ -92,7 +98,8 @@
                 hairColor: 'brown',
                 eyeColor: 'green',
                 userColor: '#af61c9',
-                location: 'Belgrade'
+                location: 'Belgrade',
+                username: 'm_7'
             },
             {
                 id: 'm_8',
@@ -103,7 +110,8 @@
                 hairColor: 'brown',
                 eyeColor: 'green',
                 userColor: '#bf61c9',
-                location: 'New York'
+                location: 'New York',
+                username: 'm_8'
             },
             {
                 id: 'm_9',
@@ -114,7 +122,8 @@
                 hairColor: 'brown',
                 eyeColor: 'blue',
                 userColor: '#cf61c9',
-                location: 'Washington'
+                location: 'Washington',
+                username: 'm_9'
             },
             {
                 id: 'm_10',
@@ -125,7 +134,8 @@
                 hairColor: 'brown',
                 eyeColor: 'green',
                 userColor: '#df61c9',
-                location: 'London'
+                location: 'London',
+                username: 'm_10'
             },
             {
                 id: 'f_1',
@@ -136,7 +146,8 @@
                 hairColor: 'black',
                 eyeColor: 'brown',
                 userColor: '#ff61c9',
-                location: 'New York'
+                location: 'New York',
+                username: 'f_1'
             },
             {
                 id: 'f_2',
@@ -147,7 +158,8 @@
                 hairColor: 'black',
                 eyeColor: 'brown',
                 userColor: '#3281c9',
-                location: 'London'
+                location: 'London',
+                username: 'f_2'
             },
             {
                 id: 'f_3',
@@ -158,7 +170,8 @@
                 hairColor: 'black',
                 eyeColor: 'green',
                 userColor: '#3ff1c9',
-                location: 'Paris'
+                location: 'Paris',
+                username: 'f_3'
             },
             {
                 id: 'f_4',
@@ -169,7 +182,8 @@
                 hairColor: 'black',
                 eyeColor: 'brown',
                 userColor: '#3fa1c9',
-                location: 'Bucharest'
+                location: 'Bucharest',
+                username: 'm_1'
             },
             {
                 id: 'f_5',
@@ -180,7 +194,8 @@
                 hairColor: 'black',
                 eyeColor: 'brown',
                 userColor: '#3f01c9',
-                location: 'New York'
+                location: 'New York',
+                username: 'f_5'
             },
             {
                 id: 'f_6',
@@ -191,7 +206,8 @@
                 hairColor: 'black',
                 eyeColor: 'green',
                 userColor: '#3f11c9',
-                location: 'London'
+                location: 'London',
+                username: 'f_6'
             },
             {
                 id: 'f_7',
@@ -202,7 +218,8 @@
                 hairColor: 'black',
                 eyeColor: 'brown',
                 userColor: '#3f61d9',
-                location: 'Belgrade'
+                location: 'Belgrade',
+                username: 'f_7'
             },
             {
                 id: 'f_8',
@@ -213,7 +230,8 @@
                 hairColor: 'black',
                 eyeColor: 'green',
                 userColor: '#3f6109',
-                location: 'Luxembourg'
+                location: 'Luxembourg',
+                username: 'f_8'
             },
             {
                 id: 'f_9',
@@ -224,7 +242,8 @@
                 hairColor: 'black',
                 eyeColor: 'brown',
                 userColor: '#3f6119',
-                location: 'Venice'
+                location: 'Venice',
+                username: 'f_9'
             },
             {
                 id: 'f_10',
@@ -235,8 +254,9 @@
                 hairColor: 'black',
                 eyeColor: 'blue',
                 userColor: '#3f6a49',
-                location: 'Paris'
-            }
+                location: 'Paris',
+                username: 'test'
+            }            
         ];
 
         return service;

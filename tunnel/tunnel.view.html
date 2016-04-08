@@ -6,10 +6,10 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-10 col-xs-offset-1">
-                            <div class="tunnel">
+                            <div class="tunnel" ng-if="!vm.isFinish">
                                 <h1>
                                     <i class="flaticon-diary"></i>
-                                    <span class="q-category">{{vm.currentCategory.text}}123</span>
+                                    <span class="q-category">{{vm.currentCategory.text}}</span>
                                     <span class="q-text">{{vm.currentQuestion.text}}</span>
                                 </h1>
                                 <ul class="q-answers">
@@ -22,7 +22,7 @@
                                 <form>
                                     <fieldset>
                                         <div class="field">
-                                            <button ng-click="vm.getNextQuestion">Next</button>
+                                            <button ng-click="vm.getNextQuestion()">Next</button>
                                         </div>
                                         <div class="note">
                                             You can choose one or more answers.
@@ -30,8 +30,12 @@
                                     </fieldset>
                                 </form>
                             </div>
+                            <div class="tunnel" ng-if="vm.isFinish">
+                                 <button>Finise</button>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
