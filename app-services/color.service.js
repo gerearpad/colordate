@@ -13,6 +13,7 @@
         service.getRed = getRed;
         service.getGreen = getGreen;
         service.getBlue = getBlue;
+        service.getRandomColor = getRandomColor;
 
 
         return service;
@@ -27,6 +28,15 @@
 
         function getBlue(color){
             return '#0000' + color.slice(5,7);
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++ ) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
         }
     }
 

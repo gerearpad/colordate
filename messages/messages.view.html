@@ -1,19 +1,6 @@
 <div class="app-wrapper">
     <div class="responsive-container">
         <div ng-include="'partials/header.html'"></div>
-        <!--
-        <section class="app-content">
-            <div class="message-container" ng-repeat="message in vm.messages">
-                <div class="from-image">
-                    <img class="image-from" width="50px" height="50px" ng-src="assets/img/faces/{{message.from}}.jpeg">
-                </div>
-                <div class="from-info">
-                    <span class="message-from">{{vm.getUserDetail(message.from, 'name')}}</span><span class="message-date">last massaged on {{message.date}}</span>
-                    <span class="massage-text" ng-class="{unseen: !message.read}">{{message.message}}</span>
-                </div>
-            </div>
-        </section>
-        -->
         <section class="app-content">
             <div class="content">
                 <div class="person person-message" ng-repeat="message in vm.messages">
