@@ -19,7 +19,7 @@
         function GetAll() {
             return [
                 {
-                    name: 'Lifestyle',
+                    text: 'Lifestyle',
                     questions: [
                         {
                             text: 'What do you do to stop your roommates eating your food?',
@@ -75,7 +75,7 @@
                     ]
                 },
                 {
-                    name: 'Personality',
+                    text: 'Personality',
                     questions: [
                         {
                             text: 'You arrive at a house party but no one you know is there yet. What do you do?',
@@ -167,7 +167,7 @@
                     ]
                 },
                 {
-                    name: 'Nature',
+                    text: 'Nature',
                     questions: [
                         {
                             text: 'You go out to dinner with a friend. What are you ordering?',

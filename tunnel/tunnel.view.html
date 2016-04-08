@@ -1,20 +1,44 @@
 <div class="app-wrapper">
     <div class="responsive-container">
-        <div ng-include="'partials/header.html'"></div>
+        <div class="incl-disabled" ng-include="'partials/header.html'"></div>
         <section class="app-content">
             <div class="content">
-                <h4>{{vm.currentCategory.text}}</h4>
-                <div>
-                    {{vm.currentQuestion.text}}
-                    <ul>
-                        <li ng-repeat="answer in vm.currentQuestion.answers">
-                            <input type="checkbox" />{{answer.text}}
-                        </li>
-                    </ul>
-                    <button ng-click="vm.getNextQuestion">Next</button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <div class="tunnel" ng-if="!vm.isFinish">
+                                <h1>
+                                    <i class="flaticon-diary"></i>
+                                    <span class="q-category">{{vm.currentCategory.text}}</span>
+                                    <span class="q-text">{{vm.currentQuestion.text}}</span>
+                                </h1>
+                                <ul class="q-answers">
+                                    <li ng-repeat="answer in vm.currentQuestion.answers">
+                                        <input type="checkbox" id=""/>
+                                        <label for="">{{answer.text}}</label>
+                                    </li>
+                                </ul>
+                                <br>
+                                <form>
+                                    <fieldset>
+                                        <div class="field">
+                                            <button ng-click="vm.getNextQuestion()">Next</button>
+                                        </div>
+                                        <div class="note">
+                                            You can choose one or more answers.
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="tunnel" ng-if="vm.isFinish">
+                                 <button>Finise</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
-        <div ng-include="'partials/footer.html'"></div>
+        <div class="incl-disabled" ng-include="'partials/footer.html'"></div>
     </div>
 </div>

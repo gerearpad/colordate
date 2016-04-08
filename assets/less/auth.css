@@ -158,9 +158,11 @@ form fieldset button {
   transition: all 0.2s ease-in-out 0s;
   outline-width: 0 !important;
   border-radius: 20px !important;
+  color: #FFFFFF;
+  border: 0;
 }
 form fieldset button:hover {
-  color: #db2e52;
+  background: #db2e52;
 }
 form fieldset .note {
   padding: 10px 0;
