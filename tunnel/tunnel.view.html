@@ -14,8 +14,8 @@
                                 </h1>
                                 <ul class="q-answers">
                                     <li ng-repeat="answer in vm.currentQuestion.answers">
-                                        <input type="checkbox" id=""/>
-                                        <label for="">{{answer.text}}</label>
+                                        <input type="checkbox" id="q-{{answer.id}}"/>
+                                        <label for="q-{{answer.id}}">{{answer.text}}</label>
                                     </li>
                                 </ul>
                                 <br>
