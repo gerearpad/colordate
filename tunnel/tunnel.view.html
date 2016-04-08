@@ -8,7 +8,7 @@
                     {{vm.currentQuestion.text}}
                     <ul>
                         <li ng-repeat="answer in vm.currentQuestion.answers">
-                            {{answer.text}}
+                            <input type="checkbox" />{{answer.text}}
                         </li>
                     </ul>
                     <button ng-click="vm.getNextQuestion">Next</button>

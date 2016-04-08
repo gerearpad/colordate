@@ -10,6 +10,7 @@
     function TunnelController(QuestionService, $rootScope) {
         var vm = this;
         
+        vm.title = "Profile Quetions";
         vm.currentCategoryIndex = -1;
         vm.currentCategory = {};
         vm.currentQuestionIndex = -1;
@@ -33,6 +34,7 @@
         function getNextCategory(){
             vm.currentCategoryIndex++;
             vm.currentCategory = QuestionService.GetAll()[vm.currentCategoryIndex];
+            vm.title = vm.currentCategory.text;
         }
         
     }
