@@ -5,13 +5,16 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['UserService', '$rootScope'];
-    function HomeController(UserService, $rootScope) {
+    HomeController.$inject = ['UserService', '$rootScope', 'ColorService'];
+    function HomeController(UserService, $rootScope, ColorService) {
         var vm = this;
 
         vm.title = 'Matches';
         vm.user = null;
         vm.allUsers = [];
+        vm.getRed = ColorService.getRed;
+        vm.getGreen = ColorService.getGreen;
+        vm.getBlue = ColorService.getBlue;
         //vm.deleteUser = deleteUser;
 
         initController();
